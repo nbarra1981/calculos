@@ -21,27 +21,27 @@ namespace Calculos
             CelsiusFahrenheit,
             FahrenheitCelsius
         }
-    }
-    
-    /// <summary>
-    /// Conversão de temperaturas.
-    /// </summary>
-    /// <param name="conversao">A conversao a efetuar.</param>
-    /// <param name="temperatura">A temperatura a converter.</param>
-    /// <returns>Retorna o resultado da conversão.</returns>
-    public static double ConverterTemperatura(ConversaoTemperatura conversao, double temperatura)
-    {
-        if (conversao == ConversaoTemperatura.CelsiusFahrenheit)
+
+        /// <summary>
+        /// Conversão de temperaturas.
+        /// </summary>
+        /// <param name="conversao">A conversao a efetuar.</param>
+        /// <param name="temperatura">A temperatura a converter.</param>
+        /// <returns>Retorna o resultado da conversão.</returns>
+        public static double ConverterTemperatura(ConversaoTemperatura conversao, double temperatura)
         {
-            return (temperatura * 1.8000 + 32);
-        }
-        else if (conversao == ConversaoTemperatura.FahrenheitCelsius)
-        {
-            return ((temperatura - 32) / 1.8000);
-        }
-        else
-        {
-            return -1;
+            if (conversao == ConversaoTemperatura.CelsiusFahrenheit)
+            {
+                return (temperatura * 1.8000 + 32);
+            }
+            else if (conversao == ConversaoTemperatura.FahrenheitCelsius)
+            {
+                return ((temperatura - 32) / 1.8000);
+            }
+            else
+            {
+                return -1;
+            }
         }
     }
 }
